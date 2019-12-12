@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客 |  Enjoy
+  </title>
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  <link rel="stylesheet" href="/css/style.css">  <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">  <script src="/js/pace.min.js"></script>
+
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-blog-init" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客
+</h1>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/12/10/blog-init/" class="article-date">
+  <time datetime="2019-12-10T15:57:14.000Z" itemprop="datePublished">2019-12-10</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>强烈推荐<a href="https://education.github.com/pack" target="_blank" rel="noopener">Github学生包</a>，内含大量对学生的免费福利，包括不限于Jetbrain全家桶，AWS，Azure，DigitalOcean，Namecheap，name等。本文基于Github学生包里的DigitalOcean $50和Namecheap一年个人域名搭建个人博客。</p>
+<h2 id="技术架构"><a href="#技术架构" class="headerlink" title="技术架构"></a>技术架构</h2><ul>
+<li><p>VPS：<a href="https://cloud.digitalocean.com/" target="_blank" rel="noopener">DigitalOcean</a></p>
+</li>
+<li><p>域名注册：<a href="https://www.namecheap.com/" target="_blank" rel="noopener">NameCheap</a></p>
+</li>
+<li><p>博客框架：<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a></p>
+</li>
+<li><p>自动部署：<a href="https://git-scm.com/" target="_blank" rel="noopener">githook</a></p>
+<a id="more"></a>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2></li>
+<li><p>学生，或者有一个.edu后缀的邮箱</p>
+</li>
+<li><p>可以给国外付款的visa卡，或者PayPal（可使用银联的借记卡）</p>
+</li>
+<li><p>$5用来激活账户</p>
+</li>
+</ul>
+<h2 id="Github学生认证"><a href="#Github学生认证" class="headerlink" title="Github学生认证"></a>Github学生认证</h2><p>这一步网络上有大量教程，本文不再赘述。</p>
+<p>参见：</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_40176716/article/details/84679999" target="_blank" rel="noopener">注册Github并进行学生认证</a></li>
+<li><a href="https://blog.csdn.net/qq_36667170/article/details/79084166" target="_blank" rel="noopener">Github教程 学生认证</a></li>
+</ul>
+<h2 id="注册Paypal"><a href="#注册Paypal" class="headerlink" title="注册Paypal"></a>注册Paypal</h2><p>亲测中国银行借记卡(有union标志)可用。</p>
+<p>参见：</p>
+<ul>
+<li><a href="https://blog.csdn.net/love_bb/article/details/76064080" target="_blank" rel="noopener">注册申请PayPal支付账户</a></li>
+<li><a href="https://blog.csdn.net/PecoVio/article/details/82708048" target="_blank" rel="noopener">PayPal注册绑卡使用教程</a></li>
+</ul>
+<h2 id="注册DigitalOcean"><a href="#注册DigitalOcean" class="headerlink" title="注册DigitalOcean"></a>注册DigitalOcean</h2><p>这一步也很简单，参见网上教程，只是最近注册完之后增加了一步verify，需要实名认证。processing的过程有点慢，我的认证13个小时才给我成功，如果卡在processing不用急，睡一觉就好了。</p>
+<p>参见：</p>
+<ul>
+<li><a href="https://blog.csdn.net/hunzhangzui9837/article/details/84974624" target="_blank" rel="noopener">在GitHub Students Developer Pack申请DigitalOcean的50刀优惠码</a></li>
+<li><a href="https://www.jianshu.com/p/c5e7721d886c?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">从领取Github教育礼包到DigitalOcean购买服务器</a></li>
+</ul>
+<h2 id="申请一个服务器"><a href="#申请一个服务器" class="headerlink" title="申请一个服务器"></a>申请一个服务器</h2><p>新建一个实例（droplets）,系统选择ubuntu（centos也可），standard（标准型，我们用来搭建个人博客足够了）：</p>
+<p><img src="/asset/create-droplets.png" alt="create-droplets"></p>
+<p>价格选择最便宜的，这样可以用接近一年</p>
+<p><img src="/asset/prize.png" alt="prize"></p>
+<p>重点来了！！！</p>
+<p>服务器既然在国外，那速度肯定是首要考虑的。所以在选择服务器所在地区的时候，首先我们可以在官网测一下到达每个地方的速度，选择最快的地方搭建我们的服务器。在这里我选择了Frankfurt：</p>
+<p><img src="/asset/region.png" alt="region"></p>
+<p>下面是一些常规选项，IPV6看个人需求可要可不要，其他有些是付费的，没需求就不用改</p>
+<p><img src="/asset/others.png" alt="others"></p>
+<p>最后点击create droplet等待30s即创建好第一个服务器，随后服务器IP，Root，密码会发到你的邮箱里。</p>
+<p><img src="/asset/final.png" alt="final"></p>
+<h2 id="本地配置hexo"><a href="#本地配置hexo" class="headerlink" title="本地配置hexo"></a>本地配置hexo</h2><p>怎么安装，怎么使用，怎么用markdown写作，怎么部署到远程VPS服务器，在<a href="http://peizhengyijiaqin.me/2019/12/11/writing/">下一篇博客</a>会讲。</p>
+<h2 id="部署Hexo到远程VPS服务器"><a href="#部署Hexo到远程VPS服务器" class="headerlink" title="部署Hexo到远程VPS服务器"></a>部署Hexo到远程VPS服务器</h2><p>putty输入服务器IP和密码远程连接，在第一次登录时由于DigitalOcean的安全策略会让你修改自己的登录密码。</p>
+<p>具体过程参见：<br><a href="https://www.jianshu.com/p/5cf20649f328" target="_blank" rel="noopener">简书-VPS部署Hexo网站</a></p>
+<p>现在，在浏览器输入 http://[yourIP] 就可以看到你的个人网站了！下一步我们通过设置域名来访问。</p>
+<h2 id="注册域名-域名解析"><a href="#注册域名-域名解析" class="headerlink" title="注册域名/域名解析"></a>注册域名/域名解析</h2><p>从Github学生包界面进入namecheap，挑选没有被别人占用的域名，确认后设置域名解析：<br><a href="https://blog.csdn.net/SweetTool/article/details/87900507" target="_blank" rel="noopener">Namecheap域名如何绑定IP</a></p>
+<p>等待几分钟后，就可以通过你的.me域名进入网站了！</p>
+
+      
+      <!-- 打赏 -->
+      
+        <div class="page-reward">
+          <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+            <div class="tooltip tooltip-east">
+              <span class="tooltip-item">
+                赏
+              </span>
+              <span class="tooltip-content">
+                <span class="tooltip-text">
+                  <span class="tooltip-inner">
+                    <p class="reward-p"><i class="icon icon-quo-left"></i>请我喝杯咖啡吧~<i
+                        class="icon icon-quo-right"></i></p>
+                    <div class="reward-box">
+                      
+                      <div class="reward-box-item">
+                        <img class="reward-img" src="/images/alipay.jpg">
+                        <span class="reward-type">支付宝</span>
+                      </div>
+                      
+                      
+                      <div class="reward-box-item">
+                        <img class="reward-img" src="/images/wechat.jpg">
+                        <span class="reward-type">微信</span>
+                      </div>
+                      
+                    </div>
+                  </span>
+                </span>
+              </span>
+            </div>
+          </a>
+        </div>
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://peizhengyijiaqin.me/2019/12/10/blog-init/" data-id="ck42xsool0002e8vw0dgxencw"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VPS/" rel="tag">VPS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hginx/" rel="tag">hginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%AB%99/" rel="tag">网站</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2019/12/11/writing/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Hexo+markdown开始博客写作
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2019/12/09/summury-of-big-data-competition/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">2019大数据算法赛总结</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: 'chaSYi8FMdJBwzIBpxeNjqWC-gzGzoHsz',
+        app_key: 'PqqkLYgPkHvH1BmyQqySWnSK',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2019
+        Wang Peizheng
+      </li>
+      <li>
+        
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a> by shenyu
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278279065&amp;web_id=1278279065'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Enjoy"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/poems">诗集</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/tocbot.min.js"></script>
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+<script>
+  var ayerConfig = {
+    mathjax: true
+  }
+</script>
+
+<script src="/js/ayer.js"></script>
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  </div>
+</body>
+
+</html>
