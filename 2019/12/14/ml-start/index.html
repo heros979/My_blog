@@ -89,7 +89,7 @@
 L_{MSE}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}\left(y_{i}-\hat{y}_{i}\right)^{2}</script><p>这里的m表示数据个数。</p>
 <p>除此之外，对于<strong>二分类</strong>问题来说，常用的损失函数是二元交叉熵损失(Logistic损失):</p>
 <script type="math/tex; mode=display">
-L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}-y_{i} \log \hat{y}_{i}-\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)</script><p>这里的 $\hat{y}$ 代表预测y=1的概率。</p>
+L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}_{i}-\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)]</script><p>这里的 $\hat{y}$ 代表预测y=1的概率。</p>
 <h3 id="3-2-梯度下降"><a href="#3-2-梯度下降" class="headerlink" title="3.2.梯度下降"></a>3.2.梯度下降</h3><p>我们知道了我们的目标是让k和b最小，那我们怎么实现呢？接下来我们来看一下它的解决方案——使用<strong>梯度下降</strong>算法来更新参数。</p>
 <p><img src="/asset/gradient.jpeg" alt="梯度下降"></p>
 <p>这里 $\theta_0$ 和 $\theta_1$ 分别代表k和b。</p>
