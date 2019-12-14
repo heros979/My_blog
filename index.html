@@ -92,7 +92,7 @@
 <p>机器学习是基于数据的算法，是让计算机从数据中学习的算法。</p>
 <p>让我<a href="https://www.jianshu.com/p/25ef14c072ad" target="_blank" rel="noopener">引用</a>一张图片来说明这个问题：<br><img src="https://upload-images.jianshu.io/upload_images/15134928-7fa468b68d7c7c2b.png" alt="机器学习过程"></p>
 <p>首先，我们将我们的数据(input)和数据的标记(label)输入给算法，算法能够给出一个训练好的模型，当我们传递给这个模型没有见过的数据(input)时，它能够预测出该数据(input)的标记(label)。</p>
-<p>例如：</p>
+<p>例如：<br>
       
       <a class="article-more-link" href="/2019/12/14/ml-start/">阅读更多...</a>
       
@@ -466,6 +466,21 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
