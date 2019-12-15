@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    机器学习综述 |  Enjoy
+    First poem |  Enjoy
   </title>
   
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -25,7 +25,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-ml-start" class="article article-type-post" itemscope
+  <article id="post-poem1" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -33,7 +33,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  机器学习综述
+  First poem
 </h1>
   
 
@@ -42,8 +42,8 @@
 
     
     <div class="article-meta">
-      <a href="/2019/12/14/ml-start/" class="article-date">
-  <time datetime="2019-12-14T04:07:39.000Z" itemprop="datePublished">2019-12-14</time>
+      <a href="/2019/12/15/poem1/" class="article-date">
+  <time datetime="2019-12-15T09:11:35.000Z" itemprop="datePublished">2019-12-15</time>
 </a>
       
     </div>
@@ -66,34 +66,43 @@
       
 
       
-      <h2 id="1-机器学习是什么"><a href="#1-机器学习是什么" class="headerlink" title="1.机器学习是什么"></a>1.机器学习是什么</h2><blockquote>
-<p>机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。 <a href="https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" target="_blank" rel="noopener">wiki</a></p>
-</blockquote>
-<p>机器学习是基于数据的算法，是让计算机从数据中学习的算法。</p>
-<p>让我<a href="https://www.jianshu.com/p/25ef14c072ad" target="_blank" rel="noopener">引用</a>一张图片来说明这个问题：<br><img src="https://upload-images.jianshu.io/upload_images/15134928-7fa468b68d7c7c2b.png" alt="机器学习过程"></p>
-<p>首先，我们将我们的数据(input)和数据的标记(label)输入给算法，算法能够给出一个训练好的模型，当我们传递给这个模型没有见过的数据(input)时，它能够预测出该数据(input)的标记(label)。</p>
-<p>例如：<br><a id="more"></a><br>用一维线性回归举例:</p>
-<script type="math/tex; mode=display">y = kx+b</script><p>x就是我们的input，y就是我们的label，我们首先给算法一定的(x,y)数据，算法拟合出来一条直线方程，当我们再输入x数据时，模型能够预测出相应的y。这就是一个简单的有监督机器学习例子。当然，这里我隐藏了很多细节问题，后面我们会继续进行讨论。</p>
-<h2 id="2-机器学习的分类"><a href="#2-机器学习的分类" class="headerlink" title="2.机器学习的分类"></a>2.机器学习的分类</h2><p>按照模型的学习方式，我们可以分为如下几类：</p>
-<h3 id="2-1-有监督学习"><a href="#2-1-有监督学习" class="headerlink" title="2.1.有监督学习"></a>2.1.有监督学习</h3><p>对于数据集中的每一条数据，我们在把它交给算法前就有了相应的“正确答案”，我们的算法就是在基于这些我们人为给定的“正确答案”在做预测。</p>
-<p>有监督学习的任务一般是回归或者分类问题：</p>
-<h4 id="2-1-1-回归"><a href="#2-1-1-回归" class="headerlink" title="2.1.1.回归"></a>2.1.1.回归</h4><p>比如通过商品房的地段、高度、外形、面积、采光面积等参数来预测商品房价格。预测结果是一个连续的值。</p>
-<h4 id="2-1-2-分类"><a href="#2-1-2-分类" class="headerlink" title="2.1.2.分类"></a>2.1.2.分类</h4><p>比如通过西瓜的颜色、大小、重量、花纹等等预测西瓜甜不甜。请注意，这里我们预测的输出只包括甜和不甜，是一个离散值，这是一个二分类的问题。反之，若是我们输出的是西瓜介于0到1之间的的甜度(0是一点都不甜，1是超级甜)，那这个分类问题就转化为了回归问题。</p>
-<h3 id="2-2-无监督学习"><a href="#2-2-无监督学习" class="headerlink" title="2.2.无监督学习"></a>2.2.无监督学习</h3><p>对于数据集中的所有数据，他们没有一个相应的“正确答案”，也就是没有label。算法要做的是利用算法自动的将数据归类，也叫做<strong>聚类</strong>。</p>
-<h3 id="2-3-半监督学习"><a href="#2-3-半监督学习" class="headerlink" title="2.3.半监督学习"></a>2.3.半监督学习</h3><p>介于监督学习和无监督学习之间的一种方式。即一部分数据有标记，一部分数据没有标记。</p>
-<h3 id="2-4-增强学习"><a href="#2-4-增强学习" class="headerlink" title="2.4.增强学习"></a>2.4.增强学习</h3><p>增强学习是一种有反馈的学习方式。</p>
-<p>例子：贪吃蛇问题<br>一个N×N的格子里，定义贪吃蛇每一步前左右随机行走，碰到墙或者自身则得到负反馈，吃到果子得到正反馈，在训练很多轮以后，贪吃蛇就学会了如何躲避墙和自身去吃果子。</p>
-<h2 id="3-机器如何学习"><a href="#3-机器如何学习" class="headerlink" title="3.机器如何学习"></a>3.机器如何学习</h2><h3 id="3-1-损失函数"><a href="#3-1-损失函数" class="headerlink" title="3.1.损失函数"></a>3.1.损失函数</h3><p>还是用我们刚才那个线性回归的例子来说明：</p>
-<script type="math/tex; mode=display">y = kx+b</script><p>训练一个线性回归模型，实际上就是通过拟合来得到模型中的未知的参数k和b。拟合的过程在这里就是让MSE(均方误差)最小，MSE在这里被称为这个回归模型的<strong>损失函数</strong>，它代表了预测值与真实值的偏离程度。而我们机器学习的过程就是通过改变k和b使得<strong>损失函数</strong>取得<strong>最小值</strong>。</p>
-<script type="math/tex; mode=display">
-L_{MSE}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}\left(y_{i}-\hat{y}_{i}\right)^{2}</script><p>这里的m表示数据个数。</p>
-<p>除此之外，对于<strong>二分类</strong>问题来说，常用的损失函数是二元交叉熵损失(Logistic损失):</p>
-<script type="math/tex; mode=display">
-L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}_{i}-\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)]</script><p>这里的 $\hat{y}$ 代表预测y=1的概率。</p>
-<h3 id="3-2-梯度下降"><a href="#3-2-梯度下降" class="headerlink" title="3.2.梯度下降"></a>3.2.梯度下降</h3><p>我们知道了我们的目标是让k和b最小，那我们怎么实现呢？接下来我们来看一下它的解决方案——使用<strong>梯度下降</strong>算法来更新参数。</p>
-<p><img src="/asset/gradient.jpeg" alt="梯度下降"></p>
-<p>这里 $\theta_0$ 和 $\theta_1$ 分别代表k和b。</p>
-<p>我们从一个随机的k和b出发，沿着向下最快的路径行走，直到达到最低点，即此时k和b收敛于一个定值，这个定值就是我们想要得到的使得损失函数最小的值。</p>
+      <h2 id="LOST"><a href="#LOST" class="headerlink" title="LOST"></a><font face="Times New Roman" size=6>LOST</font></h2><h3 id="nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-——Evie"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-——Evie" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——Evie"></a><font face="Monotype Corsiva" size=5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——Evie</font></h3><font face="Ink Free" size=5>
+
+Chilled night, chilly light, <br>
+Wind rolling sky, <br>
+Cloud over head. <br>
+Ashes tangled my hair, <br>
+Mind lost from ear. <br>
+<br>
+Running from sunlight, <br>
+The music ignite a fire, <br>
+Lit a face in the dusky theater air; <br>
+The dance stepped the melody <br>
+Into my eyes gently. <br>
+Tears shining <br> 
+In the reflected screen light, <br>
+Heart flipping <br> 
+Over the woebegone rejoicing <br>
+With the beauty of art. <br>
+<br>
+I've lost my blue <br>
+From their bloody mouth. <br>
+Taping up and down, <br>
+Their tip of tongue fan a fame. <br>
+When there is no longer a pure face <br>
+But tech race on the screen, <br>
+They stop looking into themselves. <br>
+<br>
+I've shut my soul from heat of lies, <br>
+But lost in my chilling heart. <br>
+Looking outside <br> 
+From the window of fear, <br>
+Everyone seems to be tired. <br>
+Walking over again <br>
+Like nothing changed there, <br>
+I want my feeling back. <br>
+
+</font> 
 
       
       <!-- 打赏 -->
@@ -132,10 +141,10 @@ L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}
         
     </div>
     <footer class="article-footer">
-      <a data-url="http://peizhengyijiaqin.me/2019/12/14/ml-start/" data-id="ck453soq50005swvwgczu1db0"
+      <a data-url="http://peizhengyijiaqin.me/2019/12/15/poem1/" data-id="ck46trtnr0000zwvw6sik6hos"
         class="article-share-link">分享</a>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/poem/" rel="tag">poem</a></li></ul>
 
     </footer>
 
@@ -145,19 +154,10 @@ L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}
   
   <nav class="article-nav">
     
-      <a href="/2019/12/15/poem1/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            First poem
-          
-        </div>
-      </a>
     
-    
-      <a href="/2019/12/11/writing/" class="article-nav-link">
+      <a href="/2019/12/14/ml-start/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hexo+markdown开始博客写作</div>
+        <div class="article-nav-title">机器学习综述</div>
       </a>
     
   </nav>
