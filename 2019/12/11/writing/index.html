@@ -70,21 +70,14 @@
 <li>Hexo安装</li>
 <li>Hexo使用</li>
 <li>Markdown写作<a id="more"></a>
-
 </li>
 </ul>
 <h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>引用<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a>：</p>
 <blockquote>
 <p><strong>什么是 Hexo?</strong><br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<blockquote>
 <p><strong>安装</strong><br>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请提交问题，我们会尽力解决您的问题。</p>
-</blockquote>
-<blockquote>
 <p><strong>安装前提</strong><br>安装 Hexo 相当简单，只需要先安装下列应用程序即可：<br>Node.js (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)<br>Git</p>
 <p>如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 安装 Hexo 步骤。<br>如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p>
-</blockquote>
-<blockquote>
 <p><strong>安装 Git</strong></p>
 <ul>
 <li>Windows：下载并安装 git.</li>
@@ -92,8 +85,6 @@
 <li>Linux (Ubuntu, Debian)：sudo apt-get install git-core</li>
 <li>Linux (Fedora, Red Hat, CentOS)：sudo yum install git-core</li>
 </ul>
-</blockquote>
-<blockquote>
 <p><strong>安装 Node.js</strong><br>Node.js 为大多数平台提供了官方的 <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">安装程序</a>。对于中国大陆地区用户，可以前往 <a href="https://npm.taobao.org/mirrors/node" target="_blank" rel="noopener">淘宝 Node.js 镜像</a> 下载。</p>
 <p>其它的安装方法：</p>
 <ul>
@@ -113,39 +104,24 @@
 <p>在选定的文件夹下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:heros979&#x2F;My_blog.git</span></pre></td></tr></table></figure>
 <p>clone后面是你的github代码库的地址，示例是我的，你们要改成你们自己的。</p>
-<p><strong>如果你是第一次建立自己的网站</strong>，在你想要的（随意哪个都行）文件夹里右键进入git bush，输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$ cd &lt;folder&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$ npm install</span></pre></td></tr></table></figure>
-<p>其中folder是你存放代码的文件夹名字</p>
-<p>好了，我们的文件夹里有了很多新的文件,如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">├── _config.yml</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">├── package.json</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">├── scaffolds</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">├── source</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">|   ├── _drafts</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">|   └── _posts</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">└── themes</span></pre></td></tr></table></figure>
-
+<p><strong>如果你是第一次建立自己的网站</strong>，在你想要的（随意哪个都行）文件夹里右键进入git bush，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">$ cd &lt;folder&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">$ npm install</span></pre></td></tr></table></figure><br>其中folder是你存放代码的文件夹名字</p>
+<p>好了，我们的文件夹里有了很多新的文件,如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">├── _config.yml</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">├── package.json</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">├── scaffolds</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">├── source</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">|   ├── _drafts</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">|   └── _posts</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">└── themes</span></pre></td></tr></table></figure></p>
 <p>其中 _config.yml 是网站的<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">配置</a>信息，您可以在此配置大部分的参数。<br>如果是第一次建立的话，要在deploy处加入自己的github地址。例如我的：</p>
 <p><img src="/asset/deploy.png" alt="deploy"></p>
-<p>我们要写的博客就放在 _post 文件夹里。在根目录可以使用如下方式新建post</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo new &lt;post-name&gt;</span></pre></td></tr></table></figure>
-
-<p>我们在写完post后在根目录输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo g</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo d</span></pre></td></tr></table></figure>
-
+<p>我们要写的博客就放在 _post 文件夹里。在根目录可以使用如下方式新建post<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo new &lt;post-name&gt;</span></pre></td></tr></table></figure></p>
+<p>我们在写完post后在根目录输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo g</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo d</span></pre></td></tr></table></figure></p>
 <p>即可将我们的网站部署到VPS服务器和我们的github上。</p>
 <h2 id="Markdown写作"><a href="#Markdown写作" class="headerlink" title="Markdown写作"></a>Markdown写作</h2><p>打开我们刚才建立的post-name.md文件，我们要用markdown的语法来写这个页面，markdown是一个很简单的写作工具，也很好看，很实用。</p>
-<p>例子1：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">*开辟鸿蒙，谁为情种？*                  #这是斜体</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">**都只为风月情浓。**                    #这是加粗</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">***奈何天，伤怀日，***                  #这是斜体加粗</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&lt;font size&#x3D;4&gt;寂寥时，试遣愚衷。&lt;&#x2F;font&gt;  #自定义字体大小</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">~~因此上，演出这~~                      #这是删除线</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&gt; 怀金悼玉的《红楼梦》。                 # 这是引用</span></pre></td></tr></table></figure>
-
-<p><em>开辟鸿蒙，谁为情种？</em><br><strong>都只为风月情浓。</strong><br><strong><em>奈何天，伤怀日，</em></strong><br><font size=4>寂寥时，试遣愚衷。</font><br><del>因此上，演出这</del></p>
+<p>例子1：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">*开辟鸿蒙，谁为情种？*                  #这是斜体</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">**都只为风月情浓。**                    #这是加粗</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">***奈何天，伤怀日，***                  #这是斜体加粗</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&lt;font size&#x3D;4&gt;寂寥时，试遣愚衷。&lt;&#x2F;font&gt;  #自定义字体大小</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">~~因此上，演出这~~                      #这是删除线</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&gt; 怀金悼玉的《红楼梦》。                 # 这是引用</span></pre></td></tr></table></figure></p>
+<p><em>开辟鸿蒙，谁为情种？</em><br><strong>都只为风月情浓。</strong><br><strong><em>奈何天，伤怀日，</em></strong></p>
+<p><font size=4>寂寥时，试遣愚衷。</font><br><del>因此上，演出这</del></p>
 <blockquote>
 <p>怀金悼玉的《红楼梦》。</p>
 </blockquote>
 <p>例子2：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">## CALLED BACK  #这是标题，几个#就是几级标题</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;font face&#x3D;&quot;微软雅黑&quot; size&#x3D;6 color&#x3D;#FF0000 &gt;Just lost when I was saved!&lt;&#x2F;font&gt;  #修改字体字号颜色</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&lt;table&gt;&lt;tr&gt;&lt;td bgcolor&#x3D;orange&gt;Just felt the world go by!&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;table&gt;     #修改背景色</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">Just girt me for the onset with eternity,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">When breath blew back,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">And on the other side</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">I heard recede the disappointed tide!</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">Therefore, as one returned, I feel,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">Odd secrets of the line to tell!</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">Some sailor, skirting foreign shores,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">Some pale reporter from the awful doors </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">Before the seal!</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">Next time, to stay!</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">Next time, the things to see</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">By ear unheard,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">Unscrutinized by eye.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">Next time, to tarry,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">While the ages steal,—</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">Slow tramp the centuries,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">And the cycles wheel.</span></pre></td></tr></table></figure>
-
 <h1 id="CALLED-BACK"><a href="#CALLED-BACK" class="headerlink" title="CALLED BACK"></a>CALLED BACK</h1><p><font face="微软雅黑" size=6 color=#FF0000 >Just lost when I was saved!</font></p>
-<table><tr><td bgcolor=orange>Just felt the world go by!</td></tr></table>
-Just girt me for the onset with eternity,
-When breath blew back,
-And on the other side
-I heard recede the disappointed tide!
-
+<p><table><tr><td bgcolor=orange>Just felt the world go by!</td></tr></table><br>Just girt me for the onset with eternity,<br>When breath blew back,<br>And on the other side<br>I heard recede the disappointed tide!</p>
 <p>Therefore, as one returned, I feel,<br>Odd secrets of the line to tell!<br>Some sailor, skirting foreign shores,<br>Some pale reporter from the awful doors<br>Before the seal!</p>
 <p>Next time, to stay!<br>Next time, the things to see<br>By ear unheard,<br>Unscrutinized by eye.</p>
 <p>Next time, to tarry,<br>While the ages steal,—<br>Slow tramp the centuries,<br>And the cycles wheel.</p>
@@ -189,7 +165,7 @@ I heard recede the disappointed tide!
         
     </div>
     <footer class="article-footer">
-      <a data-url="http://peizhengyijiaqin.me/2019/12/11/writing/" data-id="ck453soq70006swvw09zz0pgg"
+      <a data-url="http://peizhengyijiaqin.me/2019/12/11/writing/" data-id="ck49x65q00007cgvweudbf5ba"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%99%E4%BD%9C/" rel="tag">写作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%AB%99/" rel="tag">网站</a></li></ul>
