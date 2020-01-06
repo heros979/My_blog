@@ -1,425 +1,493 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8" />
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    机器学习概览 |  Enjoy
-  </title>
+  <meta charset="utf-8">
   
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <title>机器学习概览 | Enjoy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="stylesheet" href="/css/style.css">  <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">  <script src="/js/pace.min.js"></script>
+  <meta name="keywords" content="机器学习" />
+  
+  
+  
+  
+  <meta name="description" content="机器学习是什么定义 wiki：机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。 Arthur samuel：机器学习是在不直接针对问题进行编程的情况下，赋予计算机学习能力的一个研究领域。  一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。">
+<meta name="keywords" content="机器学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习概览">
+<meta property="og:url" content="http:&#x2F;&#x2F;peizhengyijiaqin.me&#x2F;2019&#x2F;12&#x2F;14&#x2F;ml-start&#x2F;index.html">
+<meta property="og:site_name" content="Enjoy">
+<meta property="og:description" content="机器学习是什么定义 wiki：机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。 Arthur samuel：机器学习是在不直接针对问题进行编程的情况下，赋予计算机学习能力的一个研究领域。  一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;peizhengyijiaqin.me&#x2F;asset&#x2F;whatisml.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;peizhengyijiaqin.me&#x2F;asset&#x2F;scikit.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;peizhengyijiaqin.me&#x2F;asset&#x2F;gradient.jpeg">
+<meta property="og:updated_time" content="2020-01-06T16:59:20.894Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;peizhengyijiaqin.me&#x2F;asset&#x2F;whatisml.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Enjoy" type="application/atom+xml">
+  
 
   
 
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+  
   
 
 </head>
 
-</html>
 
-<body>
-  <div id="app">
-    <main class="content">
-      <section class="outer">
-  <article id="post-ml-start" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
 
-  <div class="article-inner">
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-ml-start" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
     
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  机器学习概览
-</h1>
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      机器学习概览
+    </h1>
   
 
-    </header>
-    
-
+      </header>
     
     <div class="article-meta">
-      <a href="/2019/12/14/ml-start/" class="article-date">
-  <time datetime="2019-12-14T04:07:39.000Z" itemprop="datePublished">2019-12-14</time>
-</a>
+      
+	<a href="/2019/12/14/ml-start/" class="article-date">
+	  <time datetime="2019-12-14T04:07:39.000Z" itemprop="datePublished">2019-12-14</time>
+	</a>
+
+      
       
     </div>
-    
-
-    
-    
-    <div class="tocbot"></div>
-
-
-
-
-
-    
-
     <div class="article-entry" itemprop="articleBody">
       
-
-
-      
-
-      
-      <h2 id="1-机器学习是什么"><a href="#1-机器学习是什么" class="headerlink" title="1.机器学习是什么"></a>1.机器学习是什么</h2><blockquote>
-<p>机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。 <a href="https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" target="_blank" rel="noopener">wiki</a></p>
+        <h2 id="机器学习是什么"><a href="#机器学习是什么" class="headerlink" title="机器学习是什么"></a>机器学习是什么</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0" target="_blank" rel="noopener">wiki</a>：机器学习算法是一类从数据中自动分析获得规律，并利用规律对未知数据进行预测的算法。</p>
+<p>Arthur samuel：机器学习是在不直接针对问题进行编程的情况下，赋予计算机学习能力的一个研究领域。</p>
 </blockquote>
-<p>机器学习是基于数据的算法，是让计算机从数据中学习的算法。</p>
-<p>让我<a href="https://www.jianshu.com/p/25ef14c072ad" target="_blank" rel="noopener">引用</a>一张图片用有监督学习来说明：<br><img src="https://upload-images.jianshu.io/upload_images/15134928-7fa468b68d7c7c2b.png" alt="机器学习过程"></p>
-<p>首先，我们将我们的数据(input)和数据的标记(label)输入给算法，算法能够给出一个训练好的模型，当我们传递给这个模型没有见过的数据(input)时，它能够预测出该数据(input)的标记(label)。</p>
-<p>例如：<br><a id="more"></a><br>用一维线性回归举例:</p>
-<script type="math/tex; mode=display">y = kx+b</script><p>x就是我们的input，y就是我们的label，我们首先给算法一定的(x,y)数据，算法拟合出来一条直线方程，当我们再输入x数据时，模型能够预测出相应的y。这就是一个简单的有监督机器学习例子。当然，这里我隐藏了很多细节问题，后面我们会继续进行讨论。</p>
-<h2 id="2-机器学习能干什么"><a href="#2-机器学习能干什么" class="headerlink" title="2.机器学习能干什么"></a>2.机器学习能干什么</h2><ul>
+<p>一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。<br><a id="more"></a></p>
+<p>让我<a href="https://www.jianshu.com/p/25ef14c072ad" target="_blank" rel="noopener">引用</a>一张图片来说明：<br><img src="/asset/whatisml.png" alt="机器学习过程"><br>注意：这里是用有监督模型举例(后面会对这个名词进一步解释)</p>
+<h3 id="针对机器学习最重要的内容"><a href="#针对机器学习最重要的内容" class="headerlink" title="针对机器学习最重要的内容"></a>针对机器学习最重要的内容</h3><ul>
+<li>数据：经验只有转化为了计算机能够理解的数据，才能让计算机从中学习。谁的数据量大、质量高，谁就占据了机器学习和人工只能领域最有利的资本。</li>
+<li>模型：即算法，有了数据之后，可以设计模型，通过数据来训练这个模型。这个模型就是机器学习的核心，作为用来产生决策的中枢。</li>
+</ul>
+<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><ul>
+<li>结构化数据————-储存在数据库中的数据</li>
+<li>非结构化数据———-语音信号、图像图形、自然语言</li>
+</ul>
+<h2 id="机器学习能干什么"><a href="#机器学习能干什么" class="headerlink" title="机器学习能干什么"></a>机器学习能干什么</h2><ul>
 <li>语音识别、机器翻译(微软Cortana、苹果Siri、科大讯飞、谷歌翻译)</li>
 <li>人脸识别(微信、支付宝、宿舍门禁)</li>
 <li>量化交易(预测股市)</li>
 <li>房价预测</li>
 <li>推荐系统(淘宝、京东、抖音)</li>
-<li><del>老中医</del></li>
+<li>医生/老中医</li>
 <li>解微分方程、不定积分(见：<a href="https://zhuanlan.zhihu.com/p/98174049?utm_source=zhihu&amp;utm_medium=social&amp;utm_oi=667848254054731776" target="_blank" rel="noopener">AI拿下高数一血，求解微分方程、不定积分只需1秒，成绩远超Matlab</a>)</li>
-<li>寻找淹没在背景噪声中的小信号(<a href="https://www.kaggle.com/c/higgs-boson" target="_blank" rel="noopener">Higgs Boson Machine Learning Challenge</a>、引力波信号)</li>
+<li>寻找淹没在背景噪声中的小信号(<a href="https://www.kaggle.com/c/higgs-boson" target="_blank" rel="noopener">Higgs Boson Machine Learning Challenge</a>、引力波信号、引力透镜参数预测)</li>
 </ul>
-<h2 id="3-机器学习的分类"><a href="#3-机器学习的分类" class="headerlink" title="3.机器学习的分类"></a>3.机器学习的分类</h2><p>按照模型的学习方式，我们可以分为如下几类：</p>
-<h3 id="3-1-有监督学习"><a href="#3-1-有监督学习" class="headerlink" title="3.1.有监督学习"></a>3.1.有监督学习</h3><p>对于数据集中的每一条数据，我们在把它交给算法前就有了相应的“正确答案”，我们的算法就是在基于这些我们人为给定的“正确答案”在做预测。</p>
+<h2 id="好用的机器学习库以及书籍推荐"><a href="#好用的机器学习库以及书籍推荐" class="headerlink" title="好用的机器学习库以及书籍推荐"></a>好用的机器学习库以及书籍推荐</h2><p>scikit-learn：最有名且易用好上手，广泛作为机器学习的入门库(Python)<br>书籍：<img src="/asset/scikit.png" alt="scikit-learn机器学习"></p>
+<h2 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h2><p>按照模型的学习方式，我们可以分为如下几类：</p>
+<h3 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h3><p>对于数据集中的每一条数据，我们在把它交给算法前就有了相应的“正确答案”，我们的算法就是在基于这些我们人为给定的“正确答案”在做预测。</p>
 <p>有监督学习的任务一般是回归或者分类问题：</p>
-<h4 id="3-1-1-回归"><a href="#3-1-1-回归" class="headerlink" title="3.1.1.回归"></a>3.1.1.回归</h4><p>比如通过商品房的地段、高度、外形、面积、采光面积等参数来预测商品房价格。预测结果是一个连续的值。</p>
 <ul>
-<li>线性回归</li>
+<li>回归：线性回归<br>比如通过商品房的地段、高度、外形、面积、采光面积等参数来预测商品房价格。预测结果是一个连续的值。</li>
+<li>分类：支持向量机(SVM)、决策树、逻辑回归、朴素贝叶斯、KNN<br>比如通过西瓜的颜色、大小、重量、花纹等等预测西瓜甜不甜。<br>请注意，这里我们预测的输出只包括甜和不甜，是一个离散值，这是一个二分类的问题。<br>反之，若是我们输出的是西瓜介于0到1之间的的甜度(0是一点都不甜，1是超级甜)，那这个分类问题就转化为了回归问题。</li>
 </ul>
-<h4 id="3-1-2-分类"><a href="#3-1-2-分类" class="headerlink" title="3.1.2.分类"></a>3.1.2.分类</h4><p>比如通过西瓜的颜色、大小、重量、花纹等等预测西瓜甜不甜。请注意，这里我们预测的输出只包括甜和不甜，是一个离散值，这是一个二分类的问题。反之，若是我们输出的是西瓜介于0到1之间的的甜度(0是一点都不甜，1是超级甜)，那这个分类问题就转化为了回归问题。</p>
+<h3 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h3><p>对于数据集中的所有数据，他们没有一个相应的“正确答案”。算法要做的是利用算法自动的将数据归类，也叫做<strong>聚类</strong>。</p>
 <ul>
-<li>SVM</li>
-<li>决策树</li>
-<li>逻辑回归</li>
-<li>朴素贝叶斯</li>
-<li>KNN</li>
+<li>KMEAN</li>
 </ul>
-<h3 id="3-2-无监督学习"><a href="#3-2-无监督学习" class="headerlink" title="3.2.无监督学习"></a>3.2.无监督学习</h3><p>对于数据集中的所有数据，他们没有一个相应的“正确答案”，也就是没有label。算法要做的是利用算法自动的将数据归类，也叫做<strong>聚类</strong>。</p>
-<ul>
-<li>KMEAN<h3 id="3-3-半监督学习"><a href="#3-3-半监督学习" class="headerlink" title="3.3.半监督学习"></a>3.3.半监督学习</h3></li>
-</ul>
-<p>介于监督学习和无监督学习之间的一种方式。即一部分数据有标记，一部分数据没有标记。</p>
-<h3 id="3-4-增强学习"><a href="#3-4-增强学习" class="headerlink" title="3.4.增强学习"></a>3.4.增强学习</h3><p>增强学习是一种有反馈的学习方式。</p>
-<p>例子：贪吃蛇问题<br>一个N×N的格子里，定义贪吃蛇每一步前左右随机行走，碰到墙或者自身则得到负反馈，吃到果子得到正反馈，在训练很多轮以后，贪吃蛇就学会了如何躲避墙和自身去吃果子。</p>
-<h2 id="4-机器学习的一般步骤"><a href="#4-机器学习的一般步骤" class="headerlink" title="4.机器学习的一般步骤"></a>4.机器学习的一般步骤</h2><h3 id="4-1-数据采集和标记"><a href="#4-1-数据采集和标记" class="headerlink" title="4.1.数据采集和标记"></a>4.1.数据采集和标记</h3><ul>
+<h3 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h3><p>介于监督学习和无监督学习之间的一种方式。即一部分数据有标记，一部分数据没有标记。</p>
+<h3 id="增强学习"><a href="#增强学习" class="headerlink" title="增强学习"></a>增强学习</h3><p>增强学习是一种有反馈的学习方式。</p>
+<p>例子：贪吃蛇问题<br>一个N×N的格子里，定义贪吃蛇每一步上下左右随机行走，碰到墙或者自身则得到负反馈，吃到果子得到正反馈，在训练很多轮以后，贪吃蛇就学会了如何躲避墙和自身去吃果子。</p>
+<h2 id="机器学习的一般步骤"><a href="#机器学习的一般步骤" class="headerlink" title="机器学习的一般步骤"></a>机器学习的一般步骤</h2><h3 id="数据采集和标记"><a href="#数据采集和标记" class="headerlink" title="数据采集和标记"></a>数据采集和标记</h3><ul>
 <li>构建数据集：收集尽可能的多的特征，给出数据标记（人工或自动）</li>
 </ul>
 <p>预测房价：面积大小、房间数、地段、楼龄等；<br>芝麻信用：海量的用户交易数据；</p>
-<h3 id="4-2-数据清洗"><a href="#4-2-数据清洗" class="headerlink" title="4.2.数据清洗"></a>4.2.数据清洗</h3><ul>
+<h3 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h3><ul>
 <li>对数据中的单位进行统一</li>
 <li>去掉重复数据、噪声和数据缺失</li>
 </ul>
-<h3 id="4-3-特征选择"><a href="#4-3-特征选择" class="headerlink" title="4.3.特征选择"></a>4.3.特征选择</h3><ul>
+<h3 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h3><ul>
 <li>从哪些特征对进行机器学习是有用的；人工设计或自动选择</li>
 </ul>
-<h3 id="4-4-模型选择"><a href="#4-4-模型选择" class="headerlink" title="4.4.模型选择"></a>4.4.模型选择</h3><ul>
+<h3 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h3><ul>
 <li>根据问题选择模型，聚类还是分类，回归还是分类</li>
 </ul>
-<h3 id="4-5-模型训练和测试"><a href="#4-5-模型训练和测试" class="headerlink" title="4.5.模型训练和测试"></a>4.5.模型训练和测试</h3><ul>
+<h3 id="模型训练和测试"><a href="#模型训练和测试" class="headerlink" title="模型训练和测试"></a>模型训练和测试</h3><ul>
 <li>把数据集合分为训练集和测试集，用训练集训练模型，训练完成后用测试集测试模型的精度。(测试集必须是模型没有见过的数据)</li>
 </ul>
-<h3 id="4-6-模型性能评估与优化"><a href="#4-6-模型性能评估与优化" class="headerlink" title="4.6.模型性能评估与优化"></a>4.6.模型性能评估与优化</h3><ul>
+<h3 id="模型性能评估与优化"><a href="#模型性能评估与优化" class="headerlink" title="模型性能评估与优化"></a>模型性能评估与优化</h3><ul>
 <li>训练时长，训练数据是否足够，是否能满足需要</li>
 </ul>
-<h3 id="4-7-模型使用"><a href="#4-7-模型使用" class="headerlink" title="4.7.模型使用"></a>4.7.模型使用</h3><ul>
+<h3 id="模型使用"><a href="#模型使用" class="headerlink" title="模型使用"></a>模型使用</h3><ul>
 <li>训练好的模型进行存储，以备下次使用</li>
 </ul>
-<h2 id="5-机器如何学习"><a href="#5-机器如何学习" class="headerlink" title="5.机器如何学习"></a>5.机器如何学习</h2><h3 id="5-1-损失函数"><a href="#5-1-损失函数" class="headerlink" title="5.1.损失函数"></a>5.1.损失函数</h3><p>我们用线性回归的例子来说明：</p>
-<script type="math/tex; mode=display">y = kx+b</script><p>训练一个线性回归模型，实际上就是通过拟合来得到模型中的未知的参数k和b。拟合的过程在这里就是让MSE(均方误差)最小，MSE在这里被称为这个回归模型的<strong>损失函数</strong>，它代表了预测值与真实值的偏离程度。而我们机器学习的过程就是通过改变k和b使得<strong>损失函数</strong>取得<strong>最小值</strong>。</p>
+<p>—————————-举个scikit例子——————————</p>
+<h2 id="机器如何学习"><a href="#机器如何学习" class="headerlink" title="机器如何学习"></a>机器如何学习</h2><h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>例如：<br>用一维线性回归举例:</p>
+<script type="math/tex; mode=display">y = kx+b</script><p>x就是我们的input，y就是我们的label，我们首先给算法一定的(x,y)数据，算法拟合出来一条直线方程，当我们再输入x数据时，模型能够预测出相应的y。这就是一个简单的有监督机器学习例子。但是，机器怎么知道哪个k和b是最好的呢？</p>
+<p>也就是说，我们需要用一个指标来衡量模型和数据的拟合程度，而模型的预测值和真实值的差，我们叫做<strong>损失函数</strong>。在这里，我们训练的一个线性回归模型，可以是让MSE(均方误差)最小，MSE在这里被称为这个回归模型的<strong>损失函数</strong>，它代表了预测值与真实值的偏离程度。而我们机器学习的过程就是通过改变k和b使得<strong>损失函数</strong>取得<strong>最小值</strong>。</p>
 <script type="math/tex; mode=display">
 L_{MSE}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}\left(y_{i}-\hat{y}_{i}\right)^{2}</script><p>这里的m表示数据个数。</p>
 <p>除此之外，对于<strong>二分类</strong>问题来说，常用的损失函数是二元交叉熵损失(Logistic损失):</p>
 <script type="math/tex; mode=display">
 L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}_{i}-\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)]</script><p>这里的 $\hat{y}$ 代表预测y=1的概率。</p>
-<h3 id="5-2-梯度下降"><a href="#5-2-梯度下降" class="headerlink" title="5.2.梯度下降"></a>5.2.梯度下降</h3><p>我们知道了我们的目标是让k和b最小，那我们怎么实现呢？接下来我们来看一下它的解决方案——使用<strong>梯度下降</strong>算法来更新参数。</p>
+<h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>我们知道了我们的目标是让k和b最小，那我们怎么实现呢？接下来我们来看一下它的解决方案——使用<strong>梯度下降</strong>算法来更新参数。</p>
 <p><img src="/asset/gradient.jpeg" alt="梯度下降"></p>
 <p>这里 $\theta_0$ 和 $\theta_1$ 分别代表k和b。</p>
 <p>我们从一个随机的k和b出发，沿着向下最快的路径行走，直到达到最低点，即此时k和b收敛于一个定值，这个定值就是我们想要得到的使得损失函数最小的值。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>1.获取数据</li>
+<li>2.处理数据(80%的时间)</li>
+<li>3.训练模型(20%的时间)</li>
+<li>4.进行预测</li>
+<li>5.观察结果，不满意则重复2.3.4.步，满意则保存模型</li>
+</ul>
 
       
-      <!-- 打赏 -->
-      
-        <div class="page-reward">
-          <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
-            <div class="tooltip tooltip-east">
-              <span class="tooltip-item">
-                赏
-              </span>
-              <span class="tooltip-content">
-                <span class="tooltip-text">
-                  <span class="tooltip-inner">
-                    <p class="reward-p"><i class="icon icon-quo-left"></i>请我喝杯咖啡吧~<i
-                        class="icon icon-quo-right"></i></p>
-                    <div class="reward-box">
-                      
-                      <div class="reward-box-item">
-                        <img class="reward-img" src="/images/alipay.jpg">
-                        <span class="reward-type">支付宝</span>
-                      </div>
-                      
-                      
-                      <div class="reward-box-item">
-                        <img class="reward-img" src="/images/wechat.jpg">
-                        <span class="reward-type">微信</span>
-                      </div>
-                      
-                    </div>
-                  </span>
-                </span>
-              </span>
-            </div>
-          </a>
-        </div>
-        
     </div>
     <footer class="article-footer">
-      <a data-url="http://peizhengyijiaqin.me/2019/12/14/ml-start/" data-id="ck4ecjjyy00019wvw4npt0b3q"
-        class="article-share-link">分享</a>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li></ul>
+      
+      
+      
 
     </footer>
-
   </div>
-
   
-  
-  <nav class="article-nav">
     
-      <a href="/2019/12/15/poem1/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            First poem
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2019/12/11/writing/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hexo+markdown开始博客写作</div>
-      </a>
-    
-  </nav>
-
-
+<nav id="article-nav">
   
-
+    <a href="/2019/12/15/poem1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          First poem
+        
+      </div>
+    </a>
   
   
-<!-- valine评论 -->
-<div id="vcomments-box">
-    <div id="vcomments">
-    </div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine@1.3.10/dist/Valine.min.js'></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        notify: false,
-        verify: false,
-        app_id: 'chaSYi8FMdJBwzIBpxeNjqWC-gzGzoHsz',
-        app_key: 'PqqkLYgPkHvH1BmyQqySWnSK',
-        path: window.location.pathname,
-        avatar: 'mp',
-        placeholder: '给我的文章加点评论吧~',
-        recordIP: true
-    });
-    const infoEle = document.querySelector('#vcomments .info');
-    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-        infoEle.childNodes.forEach(function (item) {
-            item.parentNode.removeChild(item);
-        });
-    }
-</script>
-<style>
-    #vcomments-box {
-        padding: 5px 30px;
-    }
-
-    @media screen and (max-width: 800px) {
-        #vcomments-box {
-            padding: 5px 0px;
-        }
-    }
-
-    #vcomments-box #vcomments {
-        background-color: #fff;
-    }
-
-    .v .vlist .vcard .vh {
-        padding-right: 20px;
-    }
-
-    .v .vlist .vcard {
-        padding-left: 10px;
-    }
-</style>
+    <a href="/2019/12/11/writing/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo+markdown开始博客写作</div>
+    </a>
+  
+</nav>
 
   
-
-  
-  
-  
-
 </article>
+
+<!-- Table of Contents -->
+
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习是什么"><span class="nav-number">1.</span> <span class="nav-text">机器学习是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对机器学习最重要的内容"><span class="nav-number">1.2.</span> <span class="nav-text">针对机器学习最重要的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的分类"><span class="nav-number">1.3.</span> <span class="nav-text">数据的分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习能干什么"><span class="nav-number">2.</span> <span class="nav-text">机器学习能干什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好用的机器学习库以及书籍推荐"><span class="nav-number">3.</span> <span class="nav-text">好用的机器学习库以及书籍推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的分类"><span class="nav-number">4.</span> <span class="nav-text">机器学习的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有监督学习"><span class="nav-number">4.1.</span> <span class="nav-text">有监督学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无监督学习"><span class="nav-number">4.2.</span> <span class="nav-text">无监督学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#半监督学习"><span class="nav-number">4.3.</span> <span class="nav-text">半监督学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增强学习"><span class="nav-number">4.4.</span> <span class="nav-text">增强学习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的一般步骤"><span class="nav-number">5.</span> <span class="nav-text">机器学习的一般步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据采集和标记"><span class="nav-number">5.1.</span> <span class="nav-text">数据采集和标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据清洗"><span class="nav-number">5.2.</span> <span class="nav-text">数据清洗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征选择"><span class="nav-number">5.3.</span> <span class="nav-text">特征选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型选择"><span class="nav-number">5.4.</span> <span class="nav-text">模型选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型训练和测试"><span class="nav-number">5.5.</span> <span class="nav-text">模型训练和测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型性能评估与优化"><span class="nav-number">5.6.</span> <span class="nav-text">模型性能评估与优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型使用"><span class="nav-number">5.7.</span> <span class="nav-text">模型使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器如何学习"><span class="nav-number">6.</span> <span class="nav-text">机器如何学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#损失函数"><span class="nav-number">6.1.</span> <span class="nav-text">损失函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降"><span class="nav-number">6.2.</span> <span class="nav-text">梯度下降</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol>
+    
+    </div>
+  </aside>
+
 </section>
-      <footer class="footer">
-  <div class="outer">
-    <ul class="list-inline">
-      <li>
-        &copy;
-        2019
-        Wang Peizheng
-      </li>
-      <li>
         
-        
-        
-        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a> by shenyu
-        
-      </li>
-    </ul>
-    <ul class="list-inline">
-      <li>
-        
-        
-        <ul class="list-inline">
-  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
-  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
-</ul>
-        
-      </li>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278279065&amp;web_id=1278279065'></script>
-        
-      </li>
-    </ul>
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <!-- <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p> -->
+	      <p id="copyRightEn">Copyright &copy; 2016 - 2020 Enjoy All Rights Reserved.</p>
+	      
+	      
+  		   	<!-- <p id="copyRightCn">Wang Peizheng hold copyright</p> -->
+  		   
+		</div>
+
+		
   </div>
 </footer>
-    <div class="to_top">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-      </div>
-    </main>
-    
-    <aside class="sidebar">
-      
-        <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Enjoy"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">目录</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/poems">诗集</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="Search">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-      </aside>
-      <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-<script src="/js/lazyload.min.js"></script>
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-  <script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
-
-  <script src="/js/tocbot.min.js"></script>
-  <script>
-    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-    tocbot.init({
-      tocSelector: '.tocbot',
-      contentSelector: '.article-entry',
-      headingSelector: 'h1, h2, h3, h4, h5, h6',
-      hasInnerContainers: true,
-      scrollSmooth: true,
-      positionFixedSelector: '.tocbot',
-      positionFixedClass: 'is-position-fixed',
-      fixedSidebarOffset: 'auto',
-    });
-  </script>
-
+<!-- min height -->
 
 <script>
-  var ayerConfig = {
-    mathjax: true
-  }
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
 </script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
 
-<script src="/js/ayer.js"></script>
+<!-- mathjax config similar to math.stackexchange -->
 
-
-  <script type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
   });
 </script>
 
-<script src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Enjoy
+          </div>
+          <div class="panel-body">
+            Copyright © 2020 Wang Peizheng All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+  
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
@@ -434,7 +502,6 @@ L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
-
 </html>
