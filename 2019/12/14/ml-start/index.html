@@ -76,7 +76,7 @@ function activateLightMode(){
 <p>Arthur samuel：机器学习是在不直接针对问题进行编程的情况下，赋予计算机学习能力的一个研究领域。</p>
 </blockquote>
 <p>一个计算机程序，针对某个特定任务，从历史数据学习，并且越做越好。</p>
-<p>让我<a href="https://www.jianshu.com/p/25ef14c072ad" target="_blank" rel="noopener">引用</a>一张图片来说明：<br><a href="/asset/whatisml.png" data-fancybox="group" data-caption="机器学习过程" class="fancybox"><img alt="机器学习过程" data-src="/asset/whatisml.png" class="lazyload" title="机器学习过程"></a><br>注意：这里是用有监督模型举例(后面会对这个名词进一步解释)</p>
+<p>让我<a href="https://www.jianshu.com/p/25ef14c072ad" target="_blank" rel="noopener">引用</a>一张图片来说明：<br><a href="/asset/whatisml.png" data-fancybox="group" data-caption="机器学习过程" class="fancybox"><img alt="机器学习过程" title="机器学习过程" data-src="/asset/whatisml.png" class="lazyload"></a><br>注意：这里是用有监督模型举例(后面会对这个名词进一步解释)</p>
 <h3 id="针对机器学习最重要的内容"><a href="#针对机器学习最重要的内容" class="headerlink" title="针对机器学习最重要的内容"></a>针对机器学习最重要的内容</h3><ul>
 <li>数据：经验只有转化为了计算机能够理解的数据，才能让计算机从中学习。谁的数据量大、质量高，谁就占据了机器学习和人工只能领域最有利的资本。</li>
 <li>模型：即算法，有了数据之后，可以设计模型，通过数据来训练这个模型。这个模型就是机器学习的核心，作为用来产生决策的中枢。</li>
@@ -95,7 +95,7 @@ function activateLightMode(){
 <li>解微分方程、不定积分(见：<a href="https://zhuanlan.zhihu.com/p/98174049?utm_source=zhihu&utm_medium=social&utm_oi=667848254054731776" target="_blank" rel="noopener">AI拿下高数一血，求解微分方程、不定积分只需1秒，成绩远超Matlab</a>)</li>
 <li>寻找淹没在背景噪声中的小信号(<a href="https://www.kaggle.com/c/higgs-boson" target="_blank" rel="noopener">Higgs Boson Machine Learning Challenge</a>、引力波信号、引力透镜参数预测)</li>
 </ul>
-<h2 id="好用的机器学习库以及书籍推荐"><a href="#好用的机器学习库以及书籍推荐" class="headerlink" title="好用的机器学习库以及书籍推荐"></a>好用的机器学习库以及书籍推荐</h2><p>scikit-learn：最有名且易用好上手，广泛作为机器学习的入门库(Python)<br>书籍：<a href="/asset/scikit.png" data-fancybox="group" data-caption="scikit-learn机器学习" class="fancybox"><img alt="scikit-learn机器学习" data-src="/asset/scikit.png" class="lazyload" title="scikit-learn机器学习"></a></p>
+<h2 id="好用的机器学习库以及书籍推荐"><a href="#好用的机器学习库以及书籍推荐" class="headerlink" title="好用的机器学习库以及书籍推荐"></a>好用的机器学习库以及书籍推荐</h2><p>scikit-learn：最有名且易用好上手，广泛作为机器学习的入门库(Python)<br>书籍：<a href="/asset/scikit.png" data-fancybox="group" data-caption="scikit-learn机器学习" class="fancybox"><img alt="scikit-learn机器学习" title="scikit-learn机器学习" data-src="/asset/scikit.png" class="lazyload"></a></p>
 <h2 id="机器学习的分类"><a href="#机器学习的分类" class="headerlink" title="机器学习的分类"></a>机器学习的分类</h2><p>按照模型的学习方式，我们可以分为如下几类：</p>
 <h3 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h3><p>对于数据集中的每一条数据，我们在把它交给算法前就有了相应的“正确答案”，我们的算法就是在基于这些我们人为给定的“正确答案”在做预测。</p>
 <p>有监督学习的任务一般是回归或者分类问题：</p>
@@ -141,7 +141,7 @@ function activateLightMode(){
 <p>$$<br>L_{\text {logistic }}(\hat{y}, y)=\frac{1}{m} \sum_{i=1}^{m}[-y_{i} \log \hat{y}_{i}-\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)]<br>$$</p>
 <p>这里的 $\hat{y}$ 代表预测y=1的概率。</p>
 <h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>我们知道了我们的目标是让k和b最小，那我们怎么实现呢？接下来我们来看一下它的解决方案——使用<strong>梯度下降</strong>算法来更新参数。</p>
-<p><a href="/asset/gradient.jpeg" data-fancybox="group" data-caption="梯度下降" class="fancybox"><img alt="梯度下降" data-src="/asset/gradient.jpeg" class="lazyload" title="梯度下降"></a></p>
+<p><a href="/asset/gradient.jpeg" data-fancybox="group" data-caption="梯度下降" class="fancybox"><img alt="梯度下降" title="梯度下降" data-src="/asset/gradient.jpeg" class="lazyload"></a></p>
 <p>这里 $\theta_0$ 和 $\theta_1$ 分别代表k和b。</p>
 <p>我们从一个随机的k和b出发，沿着向下最快的路径行走，直到达到最低点，即此时k和b收敛于一个定值，这个定值就是我们想要得到的使得损失函数最小的值。</p>
 <h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>本文使用scikit-learn实现一个线性回归模型举例：</p>
