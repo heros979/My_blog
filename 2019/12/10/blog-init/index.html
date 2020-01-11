@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客 | Enjoy</title><meta name="description" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta name="keywords" content="VPS,hexo,hginx,网站"><meta name="author" content="Wang Peizheng"><meta name="copyright" content="Wang Peizheng"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta name="twitter:description" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta name="twitter:image" content="http://peizhengyijiaqin.me/asset/create.jpg"><meta property="og:type" content="article"><meta property="og:title" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta property="og:url" content="http://peizhengyijiaqin.me/2019/12/10/blog-init/"><meta property="og:site_name" content="Enjoy"><meta property="og:description" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta property="og:image" content="http://peizhengyijiaqin.me/asset/create.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客 | Enjoy</title><meta name="description" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta name="keywords" content="VPS,hexo,hginx,网站"><meta name="author" content="Wang Peizheng"><meta name="copyright" content="Wang Peizheng"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta name="twitter:description" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta name="twitter:image" content="http://peizhengyijiaqin.me/asset/create.jpg"><meta property="og:type" content="article"><meta property="og:title" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta property="og:url" content="http://peizhengyijiaqin.me/2019/12/10/blog-init/"><meta property="og:site_name" content="Enjoy"><meta property="og:description" content="DigitalOcean+Hexo+Nginx+Namecheap搭建个人博客"><meta property="og:image" content="http://peizhengyijiaqin.me/asset/create.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
 var t = Cookies.get("theme");
 if (autoChangeMode == '1'){
 const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -43,7 +43,14 @@ function activateLightMode(){
   if (document.querySelector('meta[name="theme-color"]') !== null){
   document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
   }
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://peizhengyijiaqin.me/2019/12/10/blog-init/"><link rel="prev" title="Hexo+markdown开始博客写作" href="/http:/peizhengyijiaqin.me/2019/12/11/writing/"><link rel="next" title="2019大数据算法赛总结" href="/http:/peizhengyijiaqin.me/2019/12/09/summury-of-big-data-competition/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://peizhengyijiaqin.me/2019/12/10/blog-init/"><link rel="prev" title="Hexo+markdown开始博客写作" href="/http:/peizhengyijiaqin.me/2019/12/11/writing/"><link rel="next" title="2019大数据算法赛总结" href="/http:/peizhengyijiaqin.me/2019/12/09/summury-of-big-data-competition/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?https://hm.baidu.com/hm.js?57433ded918df5a88449009130e63e92";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -106,16 +113,16 @@ function activateLightMode(){
 <li><a href="https://www.jianshu.com/p/c5e7721d886c?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">从领取Github教育礼包到DigitalOcean购买服务器</a></li>
 </ul>
 <h2 id="申请一个服务器"><a href="#申请一个服务器" class="headerlink" title="申请一个服务器"></a>申请一个服务器</h2><p>新建一个实例（droplets）,系统选择ubuntu（centos也可），standard（标准型，我们用来搭建个人博客足够了）：</p>
-<p><a href="/asset/create-droplets.png" data-fancybox="group" data-caption="create-droplets" class="fancybox"><img alt="create-droplets" title="create-droplets" data-src="/asset/create-droplets.png" class="lazyload"></a></p>
+<p><a href="/asset/create-droplets.png" data-fancybox="group" data-caption="create-droplets" class="fancybox"><img alt="create-droplets" data-src="/asset/create-droplets.png" class="lazyload" title="create-droplets"></a></p>
 <p>价格选择最便宜的，这样可以用接近一年</p>
-<p><a href="/asset/prize.png" data-fancybox="group" data-caption="prize" class="fancybox"><img alt="prize" title="prize" data-src="/asset/prize.png" class="lazyload"></a></p>
+<p><a href="/asset/prize.png" data-fancybox="group" data-caption="prize" class="fancybox"><img alt="prize" data-src="/asset/prize.png" class="lazyload" title="prize"></a></p>
 <p>重点来了！！！</p>
 <p>服务器既然在国外，那速度肯定是首要考虑的。所以在选择服务器所在地区的时候，首先我们可以在官网测一下到达每个地方的速度，选择最快的地方搭建我们的服务器。在这里我选择了Frankfurt：</p>
-<p><a href="/asset/region.png" data-fancybox="group" data-caption="region" class="fancybox"><img alt="region" title="region" data-src="/asset/region.png" class="lazyload"></a></p>
+<p><a href="/asset/region.png" data-fancybox="group" data-caption="region" class="fancybox"><img alt="region" data-src="/asset/region.png" class="lazyload" title="region"></a></p>
 <p>下面是一些常规选项，IPV6看个人需求可要可不要，其他有些是付费的，没需求就不用改</p>
-<p><a href="/asset/others.png" data-fancybox="group" data-caption="others" class="fancybox"><img alt="others" title="others" data-src="/asset/others.png" class="lazyload"></a></p>
+<p><a href="/asset/others.png" data-fancybox="group" data-caption="others" class="fancybox"><img alt="others" data-src="/asset/others.png" class="lazyload" title="others"></a></p>
 <p>最后点击create droplet等待30s即创建好第一个服务器，随后服务器IP，Root，密码会发到你的邮箱里。</p>
-<p><a href="/asset/final.png" data-fancybox="group" data-caption="final" class="fancybox"><img alt="final" title="final" data-src="/asset/final.png" class="lazyload"></a></p>
+<p><a href="/asset/final.png" data-fancybox="group" data-caption="final" class="fancybox"><img alt="final" data-src="/asset/final.png" class="lazyload" title="final"></a></p>
 <h2 id="本地配置hexo"><a href="#本地配置hexo" class="headerlink" title="本地配置hexo"></a>本地配置hexo</h2><p>怎么安装，怎么使用，怎么用markdown写作，怎么部署到远程VPS服务器，在<a href="http://peizhengyijiaqin.me/2019/12/11/writing/">下一篇博客</a>会讲。</p>
 <h2 id="部署Hexo到远程VPS服务器"><a href="#部署Hexo到远程VPS服务器" class="headerlink" title="部署Hexo到远程VPS服务器"></a>部署Hexo到远程VPS服务器</h2><p>putty输入服务器IP和密码远程连接，在第一次登录时由于DigitalOcean的安全策略会让你修改自己的登录密码。</p>
 <p>具体过程参见：<br><a href="https://www.jianshu.com/p/5cf20649f328" target="_blank" rel="noopener">简书-VPS部署Hexo网站</a></p>
